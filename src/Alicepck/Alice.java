@@ -67,18 +67,22 @@ words[i] = words[i].toLowerCase();
 
 
         int c = 1;
-        System.out.println("TOP 10 WORDS IN ALICE IN WONDERLAND:");
+        System.out.println("TOP 1000 WORDS IN ALICE IN WONDERLAND:");
         System.out.println("------------------------------------");
     for(Map.Entry<String,Integer>entry:sorted_map.entrySet()){
-
-        System.out.print(c+". "+entry.getKey());
-        for (int i = 10; i > entry.getKey().length()+(c/10); i--) {
+        int digits = String.valueOf(c).length();
+        System.out.print(c+".");
+        for (int i = 4; i > digits; i--) {
+            System.out.print(" ");
+        }
+        System.out.print(entry.getKey());
+        for (int i = 17; i > entry.getKey().length(); i--) {
             System.out.print(" ");
         }
         System.out.println(entry.getValue()+" Times");
         //System.out.println(entry.getKey()+entry.getValue());
         c++;
-        if (c == 11)break;
+        if (c == 1001)break;
     }
         System.out.println("------------------------------------");
     }
