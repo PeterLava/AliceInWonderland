@@ -65,6 +65,7 @@ words[i] = words[i].toLowerCase();
 */
 
 
+       //print out the top 1000
 
         int c = 1;
         System.out.println("TOP 1000 WORDS IN ALICE IN WONDERLAND:");
